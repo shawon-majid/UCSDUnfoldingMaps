@@ -218,8 +218,10 @@ public class EarthquakeCityMap extends PApplet {
 	private void clickCityMarker(List <Marker> markers) {
 		for(Marker m: markers) {
 			if(!m.isHidden() && m.isInside(map, mouseX, mouseY)) {
-				// hide all the cities
 				lastClicked = (CommonMarker)m;
+				
+				// hide all the cities
+				
 				for(Marker cMarker: cityMarkers) {
 					if(cMarker != lastClicked) {
 						CityMarker cm = (CityMarker)cMarker;
